@@ -39,4 +39,9 @@ public class KIKInterfejs {
 		scanner.nextLine();
 	}
 
+	public static void wygranoGre (String imie) {
+		System.out.println("Brawo " + imie + " wygrales gre");
+		Scanner scanner = new Scanner(System.in);
+		scanner.nextLine();
+	}
 }

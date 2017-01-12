@@ -1,5 +1,4 @@
 
-
 public class Plansza {
 
 	private String[] pola;
@@ -12,7 +11,7 @@ public class Plansza {
 	}
 
 	public boolean wstawZnak(String znak, int pozycja) {
-		if (!KIKUtil.isDigit(pola[pozycja -1])) {
+		if (!KIKUtil.isDigit(pola[pozycja - 1])) {
 			return false;
 		}
 
@@ -41,4 +40,11 @@ public class Plansza {
 
 		return stringBuilder.toString();
 	}
+
+	public String[] getPola() {
+		return pola;
+	}
+
+	
+
 }

@@ -31,6 +31,7 @@ public class KIK {
 
 			wstawianyZnak = mapaGraczy.get(aktualnyGracz);
 			
+			
 			do {
 				int pozycja = kolkoIKrzyzykInterfejs.podajPole(aktualnyGracz);
 				czyWstawiono = plansza.wstawZnak(wstawianyZnak, pozycja);
@@ -39,8 +40,14 @@ public class KIK {
 
 				}
 			} while (!czyWstawiono);
+			
+			if (KIKUtil.czyZakoczonoGre(plansza)) {
+				KIKInterfejs.wygranoGre(aktualnyGracz);
+				break;
 		}
-		kolkoIKrzyzykInterfejs.pokazPlansze(plansza);
+		
 
 	}
+		
+}
 }
