@@ -1,4 +1,4 @@
-import java.util.Arrays;
+
 
 public class Plansza {
 
@@ -6,10 +6,13 @@ public class Plansza {
 
 	public Plansza() {
 		pola = new String[9];
+		for (int i = 1; i <= pola.length; i++) {
+			pola[i - 1] = String.valueOf(i);
+		}
 	}
 
 	public boolean wstawZnak(String znak, int pozycja) {
-		if (pola[pozycja - 1] != null) {
+		if (!KIKUtil.isDigit(pola[pozycja -1])) {
 			return false;
 		}
 
@@ -27,8 +30,8 @@ public class Plansza {
 				stringBuilder.append("-----");
 				stringBuilder.append("\n");
 			}
-			if (pola[i] == null) {
-				stringBuilder.append(" ");
+			if (KIKUtil.isDigit(pola[i])) {
+				stringBuilder.append(i);
 
 			} else {
 				stringBuilder.append(pola[i]);
